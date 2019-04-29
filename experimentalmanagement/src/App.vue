@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <h1>实验管理系统</h1>
+    <h2>实验管理系统</h2>
     <router-view/>
   </div>
 </template>

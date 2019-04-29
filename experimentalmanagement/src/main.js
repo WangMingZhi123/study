@@ -10,7 +10,13 @@ Vue.use(ElementUI)
 import axios from 'axios'
 Vue.prototype.$axios = axios
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+import iView from 'iview'; // 导入组件库
+
+import 'iview/dist/styles/iview.css'; // 导入样式
+
+Vue.use(iView);
 
 /* eslint-disable no-new */
 new Vue({
