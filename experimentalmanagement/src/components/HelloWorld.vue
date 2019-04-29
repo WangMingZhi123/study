@@ -77,7 +77,7 @@
     background-color: #ee7700;
     border: none;
     color: white;
-    font-size: 18px;
+    exfont-size: 18px;
   }
 
   .logGet .logD.logDtip .p1 {
