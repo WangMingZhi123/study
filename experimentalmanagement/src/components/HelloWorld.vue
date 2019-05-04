@@ -8,11 +8,11 @@
       <!-- 输入框 -->
       <div class="lgD">
         <img src="assets/logo.png" width="20" height="20" alt="" />
-        <input type="text" placeholder="输入用户名" />
+        <input type="text" placeholder="输入用户名" v-model="userName" />
       </div>
       <div class="lgD">
         <img src="img/logPwd.png" width="20" height="20" alt="" />
-        <input type="text" placeholder="输入用户密码" />
+        <input type="text" placeholder="输入用户密码" v-model="password" />
       </div>
       <div class="logC">
         <a><button @click="login">登 录</button></a>
@@ -22,12 +22,25 @@
 </template>
 
 <script>
+  import login from '../../static/login.json'
   export default {
+    data(){
+      return{
+        userName:"",
+        password:"",
+      }
+    },
     methods: {
       login() {
         // 假设登陆成功，则跳转到 index 组件
         //this.$router.replace('/index');
+        if((this.userName != "admin" && this.password != "admin") && (this.userName != "teacher" && this.password != "teacher") && (this.userName != "student" && this.password != "student")){
+          this.$Message.error('请输入账号及密码');
+          return;
+        }
+        localStorage.setItem("user",this.userName);
         this.$router.push({path:"./index"})
+
       }
     }
   }
