@@ -24,6 +24,11 @@ export default new Router({
           path:'/two',
           name:'two',
           component:() => import('./../components/two.vue')
+        },
+        {
+          path:'/tree',
+          name:'tree',
+          component:() => import('./../components/tree.vue')
         }
       ]
     }
